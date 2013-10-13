@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response
 
 def home(request):
     template = 'home.html'
-    ctx = {}
+    users = User.objects.all()
+    ctx = { 'users': users }
     ctx = RequestContext(request, ctx)
     return render_to_response(template, ctx)

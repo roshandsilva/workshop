@@ -4,7 +4,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Roshan', 'itsr10a@gmail.com'),
+    ('Roshan', 'itsr10a@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/Users/roshan2/Downloads/Django-1.5.4/workshop/db',                      # Or path to database file if using sqlitei3
+        'NAME': '/Users/roshan2/Downloads/Django-1.5.4/workshop/db',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -65,12 +65,14 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/static/'
+STATIC_URL = '/Users/roshan2/Downloads/Django-1.5.4/workshop/workshop/staticfiles/'
+
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    '/Users/roshan2/Downloads/Django-1.5.4/workshop/workshop/staticfiles',
 )
 
 # List of finder classes that know how to find static files in
@@ -82,7 +84,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'ibtd#*h^1-o&hjucx5*7%5$j1zkl-qg8z*w)kzsn@3w=2%iw%%'
+SECRET_KEY = 'oaf)g(1!7v4+*j63()lp1aseccqp9xq*pusl-&s3w-)a(523r1'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -120,10 +122,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    'django.contrib.admin',
+    'django.contrib.admindocs',
+    'workshop.posts',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

@@ -38,10 +38,9 @@
           <h1>Python/Django 101 Hack</h1>
           <p>Building a simple web page in Django. {{ request }} </p>
           <p> 
-          {% for user in users %}
-          {{ user.username }} has an account with {{ user.email }}
+          {% for post in posts %}
+          {{ post.author.username }} has written {{ post.title }}
           {% endfor %}
-          for list of all posts click <a href="{% url 'home' %}">here</a>
           </p>
 
           <img src='http://imgs.xkcd.com/comics/python.png'/>
